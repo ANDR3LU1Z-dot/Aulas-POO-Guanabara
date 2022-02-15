@@ -30,6 +30,11 @@ public class Caneta {
         this.ponta = p;
     }
 
+    public String getCor(){return this.cor;}
+
+    public void setCor(String c){this.cor = c;}
+
+
     public void tampar(){
         this.tampada = true;
     }
@@ -38,11 +43,19 @@ public class Caneta {
         this.tampada = false;
     }
 
+    public void rabiscar(){
+        if (tampada == true){
+            System.out.println("ERRO! Não posso rabiscar.");
+        } else {
+            System.out.println("Estou Rabiscando...");
+        }
+    }
+
     public void status(){
         System.out.println("SOBRE A CANETA:");
-        System.out.println("Modelo:" + this.modelo);
-        System.out.println("Ponta: " + this.ponta);
-        System.out.println("Cor: " + this.cor);
+        System.out.println("Modelo:" + this.getModelo());
+        System.out.println("Ponta: " + this.getPonta());
+        System.out.println("Cor: " + this.getCor());
         System.out.println("Tampada: " + this.tampada);
     }
 }

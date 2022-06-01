@@ -4,7 +4,7 @@ public class OutContaBanco {
     public static void main(String[] args) {
         ContaBanco conta = new ContaBanco();
 
-        conta.abrirConta("cp");
+        conta.abrirConta("cpf");
         conta.status();
     }
 }

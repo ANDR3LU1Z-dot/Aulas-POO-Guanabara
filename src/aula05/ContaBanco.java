@@ -1,12 +1,16 @@
 package aula05;
 
 public class ContaBanco {
+    //Atributos
     public int numConta;
     protected String tipo;
     private String dono;
     private float saldo;
     private boolean status;
 
+    //Métodos Personalizados
+
+    //Método Construtor
     public ContaBanco() {
         saldo = 0;
         this.status = false;
@@ -52,6 +56,7 @@ public class ContaBanco {
         return  this.status = true;
     }
 
+    //Função abrirConta
     public float abrirConta(String tipoConta){
         setTipo(tipoConta);
         setStatus(status);
@@ -63,6 +68,7 @@ public class ContaBanco {
 //        this.status = true;
     }
 
+    //Função fecharConta
     public void fecharConta(){
         if(saldo > 0){
             System.out.println("Conta com dinheiro.");
